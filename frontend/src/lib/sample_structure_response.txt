@@ -1,0 +1,79 @@
+// on success
+
+{
+  data: {
+    userId: 1,
+    id: 1,
+    title: "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+    body: "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum..."
+  },
+  status: 200, // ✅ HTTP status code
+  statusText: "OK",
+  headers: {
+    "content-type": "application/json; charset=utf-8",
+    "cache-control": "max-age=43200",
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*",
+    "etag": "W/\"124-xyz\""
+    // ...many other possible headers
+  },
+  config: {
+    adapter: [Function],
+    baseURL: undefined,
+    data: undefined,
+    headers: {
+      Accept: "application/json, text/plain, */*"
+    },
+    maxBodyLength: -1,
+    maxContentLength: -1,
+    method: "get",
+    timeout: 0,
+    transformRequest: [ [Function] ],
+    transformResponse: [ [Function] ],
+    transitional: {
+      silentJSONParsing: true,
+      forcedJSONParsing: true,
+      clarifyTimeoutError: false
+    },
+    url: "https://jsonplaceholder.typicode.com/posts/1",
+    validateStatus: [Function]
+  },
+  request: {
+    // XMLHttpRequest (in browser) or ClientRequest (in Node)
+    // Example below (browser)
+    responseURL: "https://jsonplaceholder.typicode.com/posts/1",
+    status: 200,
+    readyState: 4,
+    timeout: 0,
+    withCredentials: false
+  }
+}
+
+
+// on failed
+
+{
+  message: "Request failed with status code 404",
+  name: "AxiosError",
+  code: "ERR_BAD_REQUEST", // e.g., ERR_NETWORK, ERR_CANCELED, etc.
+  config: {
+    url: "https://jsonplaceholder.typicode.com/posts/99999",
+    method: "get",
+    headers: { Accept: "application/json, text/plain, */*" },
+    timeout: 0
+  },
+  request: {
+    // same as success request (XMLHttpRequest)
+  },
+  response: {
+    data: {},
+    status: 404,
+    statusText: "Not Found",
+    headers: {
+      "content-type": "application/json; charset=utf-8"
+    },
+    config: { /* same as above */ },
+    request: {}
+  },
+  stack: "AxiosError: Request failed with status code 404\n at ...",
+}

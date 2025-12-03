@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+/*
+  ading tailwind css classes for main and inner page containers
+*/
+.main-page-container {
+    @apply bg-blue-100 h-screen p-8 border-1 border-blue-500;
+}
+
+.main-page-body {
+    @apply flex-1 p-4 rounded-2xl shadow-lg;
+}
+
+.inner-page-container {
+    @apply grid grid-cols-1 bg-white w-full p-8 relative rounded-2xl shadow-lg border-1 border-blue-500;
+}
+
+.data-container-title {
+    @apply w-full border border-gray-300 shadow-lg p-4 flex justify-between;
+}
+
+.data-container-body {
+    @apply w-full border border-gray-300 shadow-lg p-4 text-center;
+}
+
+.form-button-text {
+    @apply block text-gray-700 text-lg font-bold m-1;
+}
+
+.form-input-field {
+    @apply w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500;
+}
+
+.form-radio-lable {
+    @apply w-full px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500;
+}
+
+.my-border {
+    @apply border border-red-50 ;
+}
