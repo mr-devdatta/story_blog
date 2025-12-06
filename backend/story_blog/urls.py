@@ -17,8 +17,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from .views import hello_api
+from apps.users.views import hello_user
 
 urlpatterns = [
+    path('', hello_user),
     path('admin/', admin.site.urls),
     path('api/hello/', hello_api),   # simple API route
 ]
